@@ -1,0 +1,37 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+<h1>Письма от пользователей</h1>
+  {% for el in emailQuest %}
+  <p>Номер сообщения:{{el.id}}</p>
+  <h3>Имя:</h3>
+    <p>{{el.name}}</p>
+  <h3>Сообщение</h3>
+    <p>{{el.text}}</p>
+  <h3>Почта</h3>
+    <p>{{el.email}}</p>
+    <hr>
+  {%endfor%}
+  <h2>Ответить пользователю</h2> 
+
+
+  <form action="{{url_for('email_send')}}" method="post">
+    <div>
+      <p>Выберите почту пользователя</p>
+      <select  name="email_user">
+        {% for el in emailQuest %}
+        <option>{{el.email}}</option>
+        {%endfor%}
+      </select>
+    </div>
+    <div>
+      <p>Текст сообщения</p>
+      <textarea  id="" cols="30" rows="10" name="message" required></textarea>
+    </div>
+    <div>
+      <input type="submit" value="Отправить" name="" id="">
+    </div>
+  </form>
+
+
+{% endblock %}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+    
+<head>
+    <meta charset="UTF-8">      
+    <title>Галерея</title>
+    <link href="../static/css/galery.css" rel="stylesheet">
+</head>
+
+<body>
+    <div style="display:none">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <symbol id="fb" viewBox="0 0 7 15">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+            </symbol>
+            <symbol id="tw" viewBox="0 0 21 15">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+
+            </symbol>
+            <symbol id="vk" viewBox="0 0 22 13">
+                <path d="M21.3283 11.0851C21.2718 10.9904 20.9221 10.2306 19.2395 8.66892C17.478 7.03361 17.7146 7.29915 19.8363 4.47154C21.1285 2.74947 21.6451 1.69782 21.4834 1.24824C21.3296 0.819695 20.3792 0.932747 20.3792 0.932747L17.219 0.951151C17.219 0.951151 16.985 0.919602 16.8102 1.02345C16.6406 1.12599 16.5315 1.36261 16.5315 1.36261C16.5315 1.36261 16.0306 2.69557 15.3628 3.82872C13.9549 6.2199 13.391 6.3461 13.1609 6.19755C12.6259 5.85182 12.76 4.80675 12.76 4.06534C12.76 1.74777 13.111 0.781573 12.0751 0.531807C11.7307 0.44899 11.4783 0.393778 10.5989 0.384576C9.47099 0.372745 8.5153 0.38852 7.97502 0.652746C7.61483 0.828897 7.33746 1.22195 7.50704 1.2443C7.71605 1.2719 8.18929 1.37181 8.44037 1.7136C8.76507 2.15397 8.75324 3.14515 8.75324 3.14515C8.75324 3.14515 8.9399 5.87286 8.31812 6.21201C7.89089 6.44469 7.30591 5.97013 6.05051 3.7998C5.40769 2.689 4.9213 1.45989 4.9213 1.45989C4.9213 1.45989 4.82797 1.23115 4.66102 1.1089C4.45858 0.960353 4.17463 0.913029 4.17463 0.913029L1.16955 0.931433C1.16955 0.931433 0.71866 0.944579 0.553025 1.14045C0.405795 1.31528 0.541194 1.67547 0.541194 1.67547C0.541194 1.67547 2.89425 7.17953 5.55755 9.95456C8.00131 12.4982 10.775 12.3313 10.775 12.3313H12.0317C12.0317 12.3313 12.4117 12.2892 12.6049 12.0802C12.7837 11.8883 12.7771 11.5281 12.7771 11.5281C12.7771 11.5281 12.7521 9.84151 13.5356 9.59306C14.3072 9.34855 15.2984 11.2231 16.3488 11.9448C17.1427 12.4903 17.7461 12.3707 17.7461 12.3707L20.5553 12.3313C20.5553 12.3313 22.025 12.2406 21.3283 11.0851Z">
+                </path>
+            </symbol>            
+        </svg>
+    </div>
+    <header id="users" class="header">
+        <div class="container-header container">           
+            <div class="header__container">
+                <nav class="header__nav">
+                    <a href="/" class="users__content users__content-text">МАЛАДОСЦЬ</a>
+                    <ul class="header__menu">
+                        <li>
+                            <a href="/" class="header__menu-link">Главная</a>
+                        </li>
+                        <li>
+                            <a href="/users" class="header__menu-link">Участники</a>
+                        </li>
+                        <li>
+                            <a href="/collection" class="header__menu-link">Коллекции</a>
+                        </li>
+                        <li>
+                            <a href="/galery" class="header__menu-link">Галерея</a>
+                        </li>
+                        <li>
+                            <a href="/contact" class="header__menu-link">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-h1">
+                    <h1>ГАЛЕРЕЯ</h1>
+                </div>
+                <div class="header__nabigation">                    
+                </div>
+                <div class="header_button">
+                    <div class="buttons">
+                        <button type="button" class="button-header">ФОТОГРАФИИ</button>
+                        <button type="button" class=" button-header button-two">ВИДЕО</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </header>
+    <div class="user-content">
+        <div class="container container-user">
+           
+            <div class="user-content__img">
+                <div class="img_ones">
+                    <img src="static/db_img/img_ones.jpg">
+                </div>
+                <div class="img_twos">
+                    <img src="static/db_img/img_twos.jpg">
+                </div>
+                <div class="img_three">
+                    <img src="static/db_img/img_three.jpg">
+                </div>
+                <div class="img_four">
+                    <img src="static/db_img/img_four.jpg">
+                </div>
+                <div class="img_five">
+                    <img src="static/db_img/img_five.jpg">
+                </div>
+                <div class="img_sex">
+                    <img src="static/db_img/img_sex.jpg">
+                </div>
+                <div class="img_seven">
+                    <img src="static/db_img/img_seven.jpg">
+                </div>
+                <div class="img_eight">
+                    <img src="static/db_img/nv3.jpg" height="106">
+                </div>
+                <div class="img_nine">
+                    <img src="static/db_img/img_nine.jpg">
+                </div>
+            </div>
+          
+        </div>
+    </div>
+    <footer id="contact">
+        <div class="container container-footer">
+            <div class="footer_social-link">
+                <ul class="header__menu footer_menu">
+                    <li>
+                        <a href="/" class="link">Главная</a>
+                    </li>
+                    <li>
+                        <a href="/users" class="link">Участники</a>
+                    </li>
+                    <li>
+                        <a href="/collection" class="link">Коллекции</a>
+                    </li>
+                    <li>
+                        <a href="/galery" class="link">Галерея</a>
+                    </li>
+                    <li>
+                        <a href="/contact" class="link">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="header__menu footer_menu social_menu">
+                    <li class="intro__socials-item">
+                        <a href="https://youtube.com/channel/UCNJ5YlHdjhvnp1SndtQfF6w" class="intro__socials-link" aria-label="Мы в Фейсбуке">
+                            <svg class="intro__social-icon icon" width="25" height="15">
+                                <use xlink:href="#fb"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="intro__socials-item">
+                        <a href="https://instagram.com/uo_ggkttid?utm_medium=copy_lin" class="intro__socials-link" aria-label="Мы в Твиттере">
+                            <svg class="intro__social-icon icon" width="20" height="14">
+                                <use xlink:href="#tw"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="intro__socials-item">
+                        <a href="https://vk.com/ggkttd_official" class="intro__socials-link" aria-label="Мы в Вконтакте">
+                            <svg class="intro__social-icon icon" width="21" height="12">
+                                <use xlink:href="#vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__text">
+                <a href="#" class="footer__link hover">Адрес: Г.Гродно  ул.М.Горького 86</a>
+                <a href="#" class="footer__link-two hover">Телефон: + 375 (29) 16-08-478 </a>
+            </div>
+        </div>
+    </footer>
+</body>
+    
+</html>
